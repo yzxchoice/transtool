@@ -12,9 +12,9 @@ export default class App {
     displayList: Array<any>;
 
     // TODO
-    static getInstance() {
+    static getInstance(dom?: any, toolElem?: any, displayList?: any) {
         if(!this.instance) {
-            this.instance = new App();
+            this.instance = new App(dom, toolElem, displayList);
         }
         return this.instance;
     }
@@ -30,17 +30,24 @@ export default class App {
         this.bindHandlers();
 
         // selects pictures on mouse down
-	    this.dom.addEventListener(Mouse.START, this.down);
+        this.dom.addEventListener(Mouse.START, this.down);
+        
+        // draws initial screen
+	    this.render();
     }
 
     bindHandlers () {
-
+        // instance-specific event handlers bound to this
+        this.up = this.up.bind(this);
+        this.down = this.down.bind(this);
+        this.move = this.move.bind(this);
+        this.render = this.render.bind(this);
     }
 
     setupTool () {
         ControlSet.controlClass = DOMControl;
-        var controls = this.getCustomControls();
-        this.tool.setControls(controls);	
+        // var controls = this.getCustomControls();
+        this.tool.setControls(ControlSet.getUniformScaler());	
     }
 
     getCustomControls () {
