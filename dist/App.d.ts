@@ -4,7 +4,7 @@ export default class App {
     dom: any;
     tool: any;
     displayList: Array<any>;
-    static getInstance(): App;
+    static getInstance(dom?: any, toolElem?: any, displayList?: any): App;
     constructor(dom?: any, toolElem?: any, displayList?: any);
     bindHandlers(): void;
     setupTool(): void;

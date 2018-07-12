@@ -25,6 +25,7 @@ var DOMTransformTool = /** @class */ (function (_super) {
                 this.controls[i].undraw(this.container);
             }
         }
+        _super.prototype.setControls.call(this, controls);
     };
     DOMTransformTool.prototype.shouldDraw = function () {
         return true;

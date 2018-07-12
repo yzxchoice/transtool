@@ -13,6 +13,8 @@ export default class DOMTransformTool extends TransformTool {
                 this.controls[i].undraw(this.container);
             }
         }
+
+        super.setControls(controls);
     }
 
     shouldDraw () {

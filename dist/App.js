@@ -15,20 +15,27 @@ var App = /** @class */ (function () {
         this.bindHandlers();
         // selects pictures on mouse down
         this.dom.addEventListener(Mouse_1.default.START, this.down);
+        // draws initial screen
+        this.render();
     }
     // TODO
-    App.getInstance = function () {
+    App.getInstance = function (dom, toolElem, displayList) {
         if (!this.instance) {
-            this.instance = new App();
+            this.instance = new App(dom, toolElem, displayList);
         }
         return this.instance;
     };
     App.prototype.bindHandlers = function () {
+        // instance-specific event handlers bound to this
+        this.up = this.up.bind(this);
+        this.down = this.down.bind(this);
+        this.move = this.move.bind(this);
+        this.render = this.render.bind(this);
     };
     App.prototype.setupTool = function () {
         ControlSet_1.default.controlClass = _1.DOMControl;
-        var controls = this.getCustomControls();
-        this.tool.setControls(controls);
+        // var controls = this.getCustomControls();
+        this.tool.setControls(ControlSet_1.default.getUniformScaler());
     };
     App.prototype.getCustomControls = function () {
         var translater = new _1.DOMControl(Control_1.ControlType.TRANSLATE);

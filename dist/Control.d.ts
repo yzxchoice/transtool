@@ -13,7 +13,7 @@ export declare enum ControlType {
     ROTATE_SCALE = 12,
     SHAPE_CIRCLE = 1,
     SHAPE_SQUARE = 2,
-    SHAPE_BORDER = 3,
+    SHAPE_BORDER = 3
 }
 export declare class Control {
     protected tool: any;

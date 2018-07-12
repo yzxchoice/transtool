@@ -13,3 +13,7 @@ var Matrix_1 = require("./Matrix");
 exports.Matrix = Matrix_1.Matrix;
 var App_1 = require("./App");
 exports.App = App_1.default;
+var ControlSet_1 = require("./ControlSet");
+exports.ControlSet = ControlSet_1.default;
+var Picture_1 = require("./Picture");
+exports.Picture = Picture_1.default;

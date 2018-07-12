@@ -15,9 +15,7 @@ var DOMControl = /** @class */ (function (_super) {
     __extends(DOMControl, _super);
     function DOMControl(type, u, v, offsetX, offsetY, size) {
         var _this = _super.call(this, type, u, v, offsetX, offsetY, size) || this;
-        _this.idCounter = 0;
-        _this.idPrefix = "-dom-control-";
-        _this.id = _this.idPrefix + (++_this.idCounter);
+        _this.id = DOMControl.idPrefix + (++DOMControl.idCounter);
         return _this;
     }
     DOMControl.prototype.undraw = function () {
@@ -124,6 +122,8 @@ var DOMControl = /** @class */ (function (_super) {
             }
         }
     };
+    DOMControl.idCounter = 0;
+    DOMControl.idPrefix = "-dom-control-";
     return DOMControl;
 }(Control_1.Control));
 exports.default = DOMControl;

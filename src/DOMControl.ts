@@ -1,12 +1,13 @@
 import { ControlType, Control } from './Control'
+
 export default class DOMControl extends Control {
     private id: any;
-    private idCounter: number = 0;
-    private idPrefix: string = "-dom-control-";
+    static idCounter: number = 0;
+    static idPrefix: string = "-dom-control-";
     constructor (type: any, u?: any, v?: any, offsetX?: number, offsetY?: number, size?: number) {
         super(type, u, v, offsetX, offsetY, size);
 
-        this.id = this.idPrefix + (++this.idCounter);
+        this.id = DOMControl.idPrefix + (++DOMControl.idCounter);
     }
 
     undraw () {
