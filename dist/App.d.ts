@@ -1,4 +1,4 @@
-import { DOMControl } from '.';
+import DOMControl from './DOMControl';
 export default class App {
     static instance: App;
     dom: any;

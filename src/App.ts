@@ -1,7 +1,7 @@
 import ControlSet from './ControlSet'
 import DOMTransformTool from './DOMTransformTool';
 import Mouse from './Mouse';
-import { DOMControl } from '.';
+import DOMControl from './DOMControl';
 import { ControlType } from './Control';
 export default class App {
 

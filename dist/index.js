@@ -1,19 +1,14 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var TransformTool_1 = require("./TransformTool");
-exports.TransformTool = TransformTool_1.default;
-var DOMTransformTool_1 = require("./DOMTransformTool");
-exports.DOMTransformTool = DOMTransformTool_1.default;
-var Control_1 = require("./Control");
-exports.ControlType = Control_1.ControlType;
-exports.Control = Control_1.Control;
-var DOMControl_1 = require("./DOMControl");
-exports.DOMControl = DOMControl_1.default;
-var Matrix_1 = require("./Matrix");
-exports.Matrix = Matrix_1.Matrix;
-var App_1 = require("./App");
-exports.App = App_1.default;
-var ControlSet_1 = require("./ControlSet");
-exports.ControlSet = ControlSet_1.default;
-var Picture_1 = require("./Picture");
-exports.Picture = Picture_1.default;
+define(["require", "exports", "./TransformTool", "./DOMTransformTool", "./Control", "./DOMControl", "./Matrix", "./App", "./ControlSet", "./Picture"], function (require, exports, TransformTool_1, DOMTransformTool_1, Control_1, DOMControl_1, Matrix_1, App_1, ControlSet_1, Picture_1) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.TransformTool = TransformTool_1.default;
+    exports.DOMTransformTool = DOMTransformTool_1.default;
+    exports.ControlType = Control_1.ControlType;
+    exports.Control = Control_1.Control;
+    exports.DOMControl = DOMControl_1.default;
+    exports.Matrix = Matrix_1.Matrix;
+    exports.App = App_1.default;
+    exports.ControlSet = ControlSet_1.default;
+    exports.Picture = Picture_1.default;
+});
+//# sourceMappingURL=index.js.map
